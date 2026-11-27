@@ -16,7 +16,23 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-`include defines.vh
+  `include defines.vh
+
+  wire cpu_en;
+
+  wire [15:0] program_word;
+
+  wire [7:0] sram_lo_q;
+  wire [7:0] sram_hi_q;
+  wire [7:0] sram_lo_a;
+  wire [7:0] sram_hi_a;
+  wire [7:0] sram_lo_d;
+  wire [7:0] sram_hi_d;
+  
+  reg sram_lo_cen;
+  reg sram_hi_cen;
+  reg sram_lo_gwen;
+  reg sram_hi_gwen;
 
   // All output pins must be assigned. If not used, assign to 0.
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
