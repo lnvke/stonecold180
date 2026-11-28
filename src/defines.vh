@@ -54,9 +54,9 @@
 
 //  FLAGS   (flags[3:0])
 
-`define FLAG_Z      0
-`define FLAG_N      1
-`define FLAG_C      2
-`define FLAG_V      3
+`define FLAG_Z      2'd0
+`define FLAG_N      2'd1
+`define FLAG_C      2'd2
+`define FLAG_V      2'd3
 
 `endif macro
